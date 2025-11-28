@@ -137,7 +137,7 @@ for col in numeric_cols_expected:
 #dado que hay varios registros del mismo usuario, tomeré el último que se hizo basándome en la columna del mes
 df_clean = df_clean.drop_duplicates(subset='Customer_ID', keep='first')
 # Eliminación de columnas innecesarias
-cols_eliminar = ['ID','Customer_ID', 'Month', 'Name', 'SSN']
+cols_eliminar = ['ID','Customer_ID', 'Month', 'Name', 'SSN', 'Age', 'Name', 'Occupation']
 df_clean = df_clean.drop(columns=cols_eliminar)
 
 # Se eliminan filas de usuarios que tienen demasiados valores nulos en su información
